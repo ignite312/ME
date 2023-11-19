@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ME/static/css/main.c889bf8c.css",
+    "main.js": "/ME/static/js/main.6abe71d1.js",
+    "static/js/787.598f4ff9.chunk.js": "/ME/static/js/787.598f4ff9.chunk.js",
+    "static/media/spectre.jpg": "/ME/static/media/spectre.8ec5d3f6e973934aa271.jpg",
+    "index.html": "/ME/index.html",
+    "main.c889bf8c.css.map": "/ME/static/css/main.c889bf8c.css.map",
+    "main.6abe71d1.js.map": "/ME/static/js/main.6abe71d1.js.map",
+    "787.598f4ff9.chunk.js.map": "/ME/static/js/787.598f4ff9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c889bf8c.css",
+    "static/js/main.6abe71d1.js"
+  ]
+}
