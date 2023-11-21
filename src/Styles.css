@@ -7,11 +7,32 @@
 
 .card {
   background-color: aliceblue;
-  padding: 50px;
+  padding: 33px;
   border-radius: 8px;
   border: 1px solid #ddd;
+  height: 300px;
+  width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0 10px; /* Adjust the margin between cards as needed */
+}
+
+/* App.css */
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 50px; /* Adjust the top and bottom margin as needed */
+}
+
+/* Apply styles for screens smaller than 600 pixels */
+@media screen and (max-width: 600px) {
+  .card-container {
+    flex-direction: column; /* Change to column layout for smaller screens */
+    align-items: center; /* Center align cards */
+  }
+
+  .card {
+    margin: 10px 0; /* Adjust the margin between cards vertically in mobile view */
+  }
 }
 
 .card:last-child {
@@ -26,9 +47,10 @@
 .card-content p {
   margin: 5px 0;
 }
+
 /* In your Styles.css or App.css */
 .logo {
-  width: 50px; /* Set your desired width */
-  height: 50px; /* Set your desired height */
+  width: 70px; /* Set your desired width */
+  height: 70px; /* Set your desired height */
   margin-bottom: 10px; /* Add margin as needed */
 }
