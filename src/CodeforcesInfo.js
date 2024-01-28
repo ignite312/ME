@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import './Styles.css';
-import codeforcesLogo from './cf.png'; // Replace with the actual file path of your Codeforces logo
+import codeforcesLogo from './logo/cf.png'; // Replace with the actual file path of your Codeforces logo
 
 const CodeforcesInfo = () => {
   const [codeforcesData, setCodeforcesData] = useState(null);

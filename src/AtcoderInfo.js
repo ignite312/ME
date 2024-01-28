@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Styles.css';
-import atcoderLogo from './atcoder.png'; // Replace with the actual file path of your Codeforces logo
+import atcoderLogo from './logo/atcoder.png'; // Replace with the actual file path of your Codeforces logo
 
 const AtCoderInfo = () => {
   const [userDetails, setUserDetails] = useState(null);

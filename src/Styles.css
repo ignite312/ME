@@ -2,25 +2,19 @@
 .card-container {
   display: flex;
   justify-content: center; /* Center the cards horizontally */
-  margin: 50px 0; /* Adjust the top and bottom margin as needed */
+  margin: 10px 20px; /* Adjust the top and bottom margin as needed */
+  margin-bottom: 100px;
 }
 
 .card {
-  background-color: aliceblue;
+  background-color: white;
   padding: 33px;
   border-radius: 8px;
   border: 1px solid #ddd;
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0 10px; /* Adjust the margin between cards as needed */
-}
-
-/* App.css */
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  margin: 50px 50px; /* Adjust the top and bottom margin as needed */
 }
 
 /* Apply styles for screens smaller than 600 pixels */
@@ -47,10 +41,17 @@
 .card-content p {
   margin: 5px 0;
 }
-
 /* In your Styles.css or App.css */
 .logo {
   width: 70px; /* Set your desired width */
   height: 70px; /* Set your desired height */
   margin-bottom: 10px; /* Add margin as needed */
+}
+.Title {
+  color: black;
+  margin-right: 5px;
+  font-size: 2em; /* Adjust the font size as needed */
+  text-align: left;
+  margin-left: 80px;
+  margin-top: 100px;
 }

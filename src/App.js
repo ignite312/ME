@@ -1,10 +1,14 @@
 // App.js
 
-import spectre from './spectre.jpg';
+import spectre from './logo/spectre.jpg';
 import './App.css';
 import CodeforcesInfo from './CodeforcesInfo';
 import GitHubInfo from './GitHubInfo';
 import AtcoderInfo from './AtcoderInfo';
+import Octagon from './Octagon';
+import Contest from './Contest';
+import Footer from './Footer';
+
 
 function App() {
   return (
@@ -20,12 +24,19 @@ function App() {
         >
           Find me on CF...
         </a>
-        <div className="card-container">
+      </header>
+      <p className="Title"> Competitive Programming Statistics</p>
+      <div className="card-container">
         <GitHubInfo />
         <CodeforcesInfo />
         <AtcoderInfo />
+
       </div>
-      </header>
+      <p className="Title">My Academic Project</p>
+      <div>
+        <Octagon/>
+      </div>
+      <Footer />
     </div>
   );
 }
