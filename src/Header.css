@@ -2,9 +2,12 @@
 
 .App-header {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #000; /* Set your preferred dark background color */
-  color: #fff; /* Set your preferred text color */
-  padding: 20px; /* Adjust padding as needed */
+  background-color: #000;
+  /* Set your preferred dark background color */
+  color: #fff;
+  /* Set your preferred text color */
+  padding: 20px;
+  /* Adjust padding as needed */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,27 +23,36 @@
 }
 
 .logo_h {
-  width: 140px; /* Increased logo size */
-  border-radius: 10%; /* Make the logo circular if needed */
+  width: 140px;
+  /* Increased logo size */
+  border-radius: 10%;
+  /* Make the logo circular if needed */
 }
 
 .text-container {
   width: 50%;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: flex-start; /* Align items to the start (left) */
-  margin-left: 20px; /* Adjust margin as needed */
+  flex-direction: column;
+  /* Stack items vertically */
+  justify-content: flex-start;
+  /* Align items to the start (left) */
+  margin-left: 20px;
+  /* Adjust margin as needed */
 }
 
 .app-title {
-  font-size: 24px; /* Set your preferred font size */
-  margin: 0; /* Remove default margin */
+  font-size: 24px;
+  /* Set your preferred font size */
+  margin: 0;
+  /* Remove default margin */
 }
 
 .app-description {
   color: white;
-  font-size: 14px; /* Set your preferred font size */
-  margin: 5px 0 0; /* Adjust margin to start from the same position */
+  font-size: 14px;
+  /* Set your preferred font size */
+  margin: 5px 0 0;
+  /* Adjust margin to start from the same position */
 }
 
 .links-container {
@@ -48,16 +60,50 @@
 }
 
 .header-link {
-  color: #fff; /* Set your preferred link color */
+
+  color: #89c4f4;
+  /* Set your preferred link color */
   text-decoration: none;
-  margin-right: 20px; /* Adjust margin as needed */
-  font-weight: bold; /* Optionally set font weight */
-  transition: color 0.3s; /* Add smooth transition on color change */
+  margin-right: 20px;
+  /* Adjust margin as needed */
+  font-weight: bold;
+  /* Optionally set font weight */
+  border: 1px solid #89c4f4;
+  /* Add a border with a light blue color */
+  padding: 8px 12px;
+  /* Add padding to improve link visibility */
+  border-radius: 5px;
+  /* Optional: Add border-radius for rounded corners */
+  transition: color 0.3s, background-color 0.3s;
+  /* Add smooth transition on color and background change */
+}
+
+.header-link2 {
+  color: #89c4f4;
+  /* Set your preferred link color */
+  text-decoration: none;
+  margin-right: 20px;
+  /* Adjust margin as needed */
+  font-weight: bold;
+  /* Optionally set font weight */
+  transition: color 0.3s;
+  /* Add smooth transition on color change */
+}
+
+.header-link2:hover {
+  color: #89c4f4;
+  /* Light blue color on hover */
 }
 
 .header-link:hover {
-  color: #89c4f4; /* Light blue color on hover */
+  color: #fff;
+  /* Set your preferred link color on hover */
+  background-color: #89c4f4;
+  /* Light blue color as background on hover */
+  border-color: #fff;
+  /* White border on hover */
 }
+
 /* Responsive design for mobile view */
 @media (max-width: 600px) {
   .App-header {
@@ -72,11 +118,16 @@
 
   .links-container {
     margin-top: 20px;
-    flex-direction: column;
+    flex-direction: row;
+    /* Make links horizontal in the mobile view */
+    justify-content: center;
+    /* Center the links horizontally */
   }
 
   .header-link {
-    margin-right: 0;
-    margin-bottom: 10px;
+    margin-right: 20px;
+    /* Adjust margin as needed */
+    margin-bottom: 0;
+    /* Remove bottom margin to align links horizontally */
   }
 }
