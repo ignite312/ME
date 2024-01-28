@@ -60,7 +60,7 @@ const Footer = () => {
       </div>
       <div className="right-section">
         <SocialIcon
-          style={{ height: 35, width: 35, cursor: 'pointer', marginRight: '5px' }}
+          style={{ height: 25, width: 25, cursor: 'pointer', marginRight: '5px' }}
           className="custom-class"
           bgColor={iconColors.github}
           url="https://github.com/ignite312"
@@ -69,7 +69,7 @@ const Footer = () => {
           onMouseLeave={() => handleMouseLeave('github')}
         />
         <SocialIcon
-          style={{ height: 35, width: 35, cursor: 'pointer', marginRight: '5px' }}
+          style={{ height: 25, width: 25, cursor: 'pointer', marginRight: '5px' }}
           className="custom-class"
           bgColor={iconColors.linkedin}
           url="https://www.linkedin.com/in/sajjademon"
@@ -78,7 +78,7 @@ const Footer = () => {
           onMouseLeave={() => handleMouseLeave('linkedin')}
         />
         <SocialIcon
-          style={{ height: 35, width: 35, cursor: 'pointer', marginRight: '5px' }}
+          style={{ height: 25, width: 25, cursor: 'pointer', marginRight: '5px' }}
           className="custom-class"
           bgColor={iconColors.discord}
           url="https://discord.com/users/ignite312"
@@ -87,7 +87,7 @@ const Footer = () => {
           onMouseLeave={() => handleMouseLeave('discord')}
         />
         <SocialIcon
-          style={{ height: 35, width: 35, cursor: 'pointer', marginRight: '5px' }}
+          style={{ height: 25, width: 25, cursor: 'pointer', marginRight: '5px' }}
           className="custom-class"
           bgColor={iconColors.gmail}
           url="mailto:contact.emonkhan@gmail.com"
@@ -96,7 +96,7 @@ const Footer = () => {
           onMouseLeave={() => handleMouseLeave('gmail')}
         />
         <SocialIcon
-          style={{ height: 35, width: 35, cursor: 'pointer', marginRight: '5px' }}
+          style={{ height: 25, width: 25, cursor: 'pointer', marginRight: '5px' }}
           className="custom-class"
           bgColor={iconColors.x}
           url="https://x.com/sajjdemon"
@@ -106,7 +106,7 @@ const Footer = () => {
           onMouseLeave={() => handleMouseLeave('x')}
         />
         <SocialIcon
-          style={{ height: 35, width: 35, cursor: 'pointer', marginRight: '5px' }}
+          style={{ height: 25, width: 25, cursor: 'pointer', marginRight: '5px' }}
           className="custom-class"
           bgColor={iconColors.instagram}
           url="https://instagram.com/sajjdemon"
@@ -115,7 +115,7 @@ const Footer = () => {
           onMouseLeave={() => handleMouseLeave('instagram')}
         />
         <SocialIcon
-          style={{ height: 35, width: 35, cursor: 'pointer' }}
+          style={{ height: 25, width: 25, cursor: 'pointer' }}
           className="custom-class"
           bgColor={iconColors.youtube}
           url="https://youtube.com/@sajjdemon"
@@ -124,7 +124,7 @@ const Footer = () => {
           onMouseLeave={() => handleMouseLeave('youtube')}
         />
         <SocialIcon
-          style={{ height: 35, width: 35, cursor: 'pointer' }}
+          style={{ height: 25, width: 25, cursor: 'pointer' }}
           className="custom-class"
           bgColor={iconColors.facebook}
           url="https://facebook.com/sajjaademon"

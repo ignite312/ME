@@ -1,6 +1,7 @@
+// AtCoderInfo.js
 import React, { useState, useEffect } from 'react';
-import './Styles.css';
-import atcoderLogo from './logo/atcoder.png'; // Replace with the actual file path of your Codeforces logo
+import atcoderLogo from './logo/atcoder.png';
+import './CardStyle.css';
 
 const AtCoderInfo = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -18,7 +19,6 @@ const AtCoderInfo = () => {
         }
 
         const userInfoData = await userInfoResponse.json();
-        console.log('userInfoData:', userInfoData);
 
         if (userInfoData) {
           setUserDetails(userInfoData);
@@ -35,18 +35,21 @@ const AtCoderInfo = () => {
 
   return (
     <div className="card">
-      <h3>AtCoder </h3>
-      <img src={atcoderLogo} alt="Codeforces Logo" className="logo" />
-      {userDetails && (
-        <div className="card-content">
-          <h2>Handle: {userDetails.user_id}</h2>
-          <div style={{ color: 'green' }}>
+      <a href="https://atcoder.jp/users/ignite312" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+
+        <h3>AtCoder </h3>
+        <img src={atcoderLogo} alt="Codeforces Logo" className="logo" />
+        {userDetails && (
+          <div className="card-content">
+            <h2>Handle: {userDetails.user_id}</h2>
+            <div style={{ color: 'green' }}>
               <span style={{ color: 'black' }}>Accepted Problem: </span>
               <strong>{userDetails.accepted_count}</strong>
             </div>
-          <p>Rated Point Sum: {userDetails.rated_point_sum}</p>
-        </div>
-      )}
+            <p>Rated Point Sum: {userDetails.rated_point_sum}</p>
+          </div>
+        )}
+      </a>
     </div>
   );
 };

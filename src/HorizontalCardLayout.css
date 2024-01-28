@@ -1,0 +1,7 @@
+/* HorizontalCardLayout.css */
+
+.horizontal-card-layout {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 0; /* No space between cards */
+}

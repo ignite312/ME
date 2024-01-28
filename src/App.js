@@ -2,11 +2,8 @@
 
 import spectre from './logo/spectre.jpg';
 import './App.css';
-import CodeforcesInfo from './CodeforcesInfo';
-import GitHubInfo from './GitHubInfo';
-import AtcoderInfo from './AtcoderInfo';
-import Octagon from './Octagon';
-import Contest from './Contest';
+import DU_Bus_Tracker from './DU-Bus-Tracker';
+import HorizontalCardLayout from './HorizontalCardLayout';
 import Footer from './Footer';
 
 
@@ -25,19 +22,11 @@ function App() {
           Find me on CF...
         </a>
       </header>
-      <p className="Title"> Competitive Programming Statistics</p>
-      <div className="card-container">
-        <GitHubInfo />
-        <CodeforcesInfo />
-        <AtcoderInfo />
-
-      </div>
-      <p className="Title">My Academic Project</p>
-      <div>
-        <Octagon/>
-      </div>
+      <HorizontalCardLayout />
+      <DU_Bus_Tracker/>
       <Footer />
     </div>
+    
   );
 }
 
