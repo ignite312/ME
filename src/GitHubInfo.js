@@ -44,7 +44,7 @@ const GitHubInfo = () => {
             <h2>Handle: {githubData.login}</h2>
             <div style={{ color: 'green' }}>
               <span style={{ color: 'black' }}>Contribution Count: </span>
-              <strong>{'500+(2023)'}</strong>
+              <strong>{'500+'}</strong>
             </div>
             <p>Public Repositories: {githubData.public_repos}</p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>

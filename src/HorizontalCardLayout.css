@@ -5,3 +5,10 @@
   justify-content: center; /* Center the cards horizontally */
   gap: 0; /* No space between cards */
 }
+
+@media (max-width: 768px) {
+  .horizontal-card-layout {
+    flex-direction: column; /* Change to vertical layout for screens up to 768px wide */
+    align-items: center; /* Center the cards vertically */
+  }
+}

@@ -64,6 +64,6 @@
 /* Responsive design */
 @media (max-width: 600px) {
     .project-card {
-        width: 100%; /* Adjust width for smaller screens */
+      width: 100%;
     }
-}
+  }

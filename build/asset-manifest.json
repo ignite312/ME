@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ME/static/css/main.9c000df4.css",
-    "main.js": "/ME/static/js/main.d852fb62.js",
+    "main.css": "/ME/static/css/main.f661ebf3.css",
+    "main.js": "/ME/static/js/main.b90912eb.js",
     "static/js/787.598f4ff9.chunk.js": "/ME/static/js/787.598f4ff9.chunk.js",
     "static/media/spectre.jpg": "/ME/static/media/spectre.8ec5d3f6e973934aa271.jpg",
     "static/media/octagon.png": "/ME/static/media/octagon.274ba347a9ed6ffc7a6f.png",
@@ -10,12 +10,12 @@
     "static/media/cf.png": "/ME/static/media/cf.5025f9fda1dd9ac1906b.png",
     "static/media/du_logo.png": "/ME/static/media/du_logo.da8700a3da64c9527d0d.png",
     "index.html": "/ME/index.html",
-    "main.9c000df4.css.map": "/ME/static/css/main.9c000df4.css.map",
-    "main.d852fb62.js.map": "/ME/static/js/main.d852fb62.js.map",
+    "main.f661ebf3.css.map": "/ME/static/css/main.f661ebf3.css.map",
+    "main.b90912eb.js.map": "/ME/static/js/main.b90912eb.js.map",
     "787.598f4ff9.chunk.js.map": "/ME/static/js/787.598f4ff9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c000df4.css",
-    "static/js/main.d852fb62.js"
+    "static/css/main.f661ebf3.css",
+    "static/js/main.b90912eb.js"
   ]
 }

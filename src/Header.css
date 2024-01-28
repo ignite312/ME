@@ -58,3 +58,25 @@
 .header-link:hover {
   color: #89c4f4; /* Light blue color on hover */
 }
+/* Responsive design for mobile view */
+@media (max-width: 600px) {
+  .App-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-container {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .links-container {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .header-link {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
