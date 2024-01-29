@@ -11,7 +11,13 @@ function App() {
   return (
     <div className="App">
       <Header />
+        <div className="center-container">
+        <h3>My Competitive Programming Stat</h3>
+      </div>
       <HorizontalCardLayout />
+      <div className="center-container">
+        <h3>Academic Project</h3>
+      </div>
       <DU_Bus_Tracker />
       <Footer />
     </div>
