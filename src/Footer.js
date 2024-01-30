@@ -54,7 +54,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div className="left-section">
         <p>&copy; 2024 Emon</p>
       </div>

@@ -13,8 +13,7 @@ const Header = () => {
         </div>
       </div>
       <div className="links-container">
-        <a href="https://ignite312.github.io/a-bit-of-CP" target='blank' className="header-link">CP Stuff</a>
-        <a href="#about" className="header-link">About</a>
+        <a href="https://ignite312.github.io/a-bit-of-CP" target='blank' className="header-link">Competitive Programming Stuff</a>
         <a href="#contact" className="header-link">Contact Me </a>
       </div>
     </header>

@@ -61,14 +61,15 @@
 
 .header-link {
 
-  color: #89c4f4;
+  color: white;
+  white-space: nowrap;
   /* Set your preferred link color */
   text-decoration: none;
   margin-right: 20px;
   /* Adjust margin as needed */
   font-weight: bold;
   /* Optionally set font weight */
-  border: 1px solid #89c4f4;
+  border: 1px solid green;
   /* Add a border with a light blue color */
   padding: 8px 12px;
   /* Add padding to improve link visibility */
@@ -79,7 +80,7 @@
 }
 
 .header-link2 {
-  color: #89c4f4;
+  color: green;
   /* Set your preferred link color */
   text-decoration: none;
   margin-right: 20px;
