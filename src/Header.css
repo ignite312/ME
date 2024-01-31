@@ -60,21 +60,14 @@
 }
 
 .header-link {
-
   color: white;
   white-space: nowrap;
-  /* Set your preferred link color */
   text-decoration: none;
   margin-right: 20px;
-  /* Adjust margin as needed */
   font-weight: bold;
-  /* Optionally set font weight */
   border: 1px solid green;
-  /* Add a border with a light blue color */
   padding: 8px 12px;
-  /* Add padding to improve link visibility */
   border-radius: 5px;
-  /* Optional: Add border-radius for rounded corners */
   transition: color 0.3s, background-color 0.3s;
   /* Add smooth transition on color and background change */
 }
@@ -126,7 +119,7 @@
   }
 
   .header-link {
-    margin-right: 20px;
+    margin-right: 10px;
     /* Adjust margin as needed */
     margin-bottom: 0;
     /* Remove bottom margin to align links horizontally */
