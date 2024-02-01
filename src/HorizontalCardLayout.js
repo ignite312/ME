@@ -9,7 +9,7 @@ const HorizontalCardLayout = () => {
   return (
     <div className="horizontal-card-layout">
       <CodeforcesInfo />
-      <GitHubInfo />
+      <GitHubInfo userHandle={"Tspectre"}/>
       <AtCoderInfo />
     </div>
   );

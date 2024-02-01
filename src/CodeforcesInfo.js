@@ -1,25 +1,30 @@
 // CodeforcesInfo.js
 import React, { useState, useEffect } from 'react';
-import codeforcesLogo from './logo/cf.png';
 import './CardStyle.css';
+import codeforcesLogo from './logo/cf.png';
 
-const CodeforcesInfo = () => {
+const CodeforcesInfo = ({ userHandle }) => {
   const [codeforcesData, setCodeforcesData] = useState(null);
   const [okProblemIds, setOkProblemIds] = useState(new Set());
   const [userDetails, setUserDetails] = useState(null);
+  const [profilePhoto, setProfilePhoto] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
-      const handle = 'Tspectre';
+      const handle = userHandle || 'Tspectre'; // Use the provided user handle or a default handle
       const submissionsUrl = `https://codeforces.com/api/user.status?handle=${handle}&from=1&count=833714451`;
       const userInfoUrl = `https://codeforces.com/api/user.info?handles=${handle}`;
 
       try {
-        const submissionsResponse = await fetch(submissionsUrl);
-        const submissionsData = await submissionsResponse.json();
+        const [submissionsResponse, userInfoResponse] = await Promise.all([
+          fetch(submissionsUrl),
+          fetch(userInfoUrl),
+        ]);
 
-        const userInfoResponse = await fetch(userInfoUrl);
-        const userInfoData = await userInfoResponse.json();
+        const [submissionsData, userInfoData] = await Promise.all([
+          submissionsResponse.json(),
+          userInfoResponse.json(),
+        ]);
 
         if (submissionsData.status === 'OK' && userInfoData.status === 'OK') {
           setCodeforcesData(submissionsData.result);
@@ -29,45 +34,76 @@ const CodeforcesInfo = () => {
           setOkProblemIds(uniqueProblemIds);
 
           setUserDetails(userInfoData.result[0]);
+
+          // Store the title photo in profilePhoto variable
+          if (userInfoData.result[0].titlePhoto) {
+            setProfilePhoto(userInfoData.result[0].titlePhoto);
+          }
         } else {
           console.error('Codeforces API request failed.');
         }
       } catch (error) {
-        console.error('Error fetching Codeforces data:', error);
+        console.error('Error fetching Codeforces data:', error.message);
       }
     };
 
     fetchData();
-  }, []);
+  }, [userHandle]);
+
+  const getColorBasedOnRating = (rating) => {
+    if (rating >= 2900) {
+      return '#FF0000'; // Red for other high ratings
+    } else if (rating >= 2600) {
+      return '#FF0000';
+    } else if (rating >= 2400) {
+      return '#FF0000';
+    } else if (rating >= 2300) {
+      return '#FFA500'; // Orange for International Master
+    } else if (rating >= 2200) {
+      return '#FFA500';
+    } else if (rating >= 1900) {
+      return '#EE82EE'; // Violet for Candidate Master
+    } else if (rating >= 1600) {
+      return '#0000FF'; // Blue for Expert
+    } else if (rating >= 1400) {
+      return '#00FFFF'; // Cyan for Specialist
+    } else if (rating >= 1200) {
+      return '#008000'; // Green for Pupil
+    } else {
+      return '#A9A9A9'; // Gray for Newbie
+    }
+  };
+
 
   return (
-
     <div className="card">
-      <a href="https://codeforces.com/profile/Tspectre" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-        <h3>Codeforces </h3>
-        <img src={codeforcesLogo} alt="Codeforces Logo" className="logo" />
-        {codeforcesData && userDetails && (
-          <div className="card-content">
-            <h2 className="rank-container" style={{ color: '#1DE7E7' }}>
-              <span style={{ color: 'black' }}>Handle: </span>
-              <strong>{userDetails.handle}</strong>
-            </h2>
-            <div style={{ color: 'green' }}>
-              <span style={{ color: 'black' }}>Accepted Problem: </span>
-              <strong>{okProblemIds.size}</strong>
-            </div>
-            {userDetails.rank === 'specialist' ? (
-              <div className="rank-container" style={{ color: '#1DE7E7' }}>
-                <span style={{ color: 'black' }}>Rank: </span>
-                <strong>{userDetails.rank.charAt(0).toUpperCase() + userDetails.rank.slice(1)}</strong>
+      <a href={`https://codeforces.com/profile/${userHandle}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+        <div className="card-content">
+          {profilePhoto && (
+            <img src={codeforcesLogo} alt="Codeforces Logo" className="logo" />
+          )}
+          {codeforcesData && userDetails && (
+            <div className="info-container">
+              <h2 className="rank-container" >
+
+                <strong style={{ color: getColorBasedOnRating(userDetails.rating) }}>
+                  {typeof userDetails.rank === 'string' && userDetails.rank.length > 1 ?
+                    userDetails.rank.charAt(0).toUpperCase() + userDetails.rank.slice(1) :
+                    userDetails.rating
+                  }
+                </strong><br />
+                {userDetails.rating >= 2900 ? <strong >{userDetails.handle[0]}</strong> : <strong style={{ color: getColorBasedOnRating(userDetails.rating) }}>{userDetails.handle[0]}</strong>}
+                <strong style={{ color: getColorBasedOnRating(userDetails.rating) }}>{userDetails.handle.substr(1)}</strong>
+              </h2>
+              <div style={{ color: 'green' }}>
+                <span style={{ color: 'black' }}>Accepted Problem: </span>
+                <strong>{okProblemIds.size}</strong>
               </div>
-            ) : (
-              <p style={{ color: 'black' }}>Rank: {userDetails.rank.charAt(0).toUpperCase() + userDetails.rank.slice(1)}</p>
-            )}
-            <p>Ratings: {userDetails.rating}</p>
-            <p>Friends: {userDetails.friendOfCount}</p>
-          </div>
-        )}
+              <p>Ratings: <strong style={{ color: getColorBasedOnRating(userDetails.rating) }}>{userDetails.rating}</strong></p>
+              <p>Friends: {userDetails.friendOfCount}</p>
+            </div>
+          )}
+        </div>
       </a>
     </div>
   );
