@@ -77,8 +77,10 @@ const CodeforcesInfo = ({ userHandle }) => {
 
   return (
     <div className="card">
+      
       <a href={`https://codeforces.com/profile/Tspectre`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
         <div className="card-content">
+        <h3> Codeforces </h3>
           {profilePhoto && (
             <img src={codeforcesLogo} alt="Codeforces Logo" className="logo" />
           )}
