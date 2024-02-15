@@ -81,9 +81,9 @@ const CodeforcesInfo = ({ userHandle }) => {
       <a href={`https://codeforces.com/profile/Tspectre`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
         <div className="card-content">
         <h3> Codeforces </h3>
-          {profilePhoto && (
-            <img src={codeforcesLogo} alt="Codeforces Logo" className="logo" />
-          )}
+        {profilePhoto && (
+          <img src={profilePhoto} alt="Codeforces Logo" className="logo" />
+        )}
           {codeforcesData && userDetails && (
             <div className="info-container">
               <h2 className="rank-container" >
@@ -102,6 +102,13 @@ const CodeforcesInfo = ({ userHandle }) => {
                 <strong>{okProblemIds.size}</strong>
               </div>
               <p>Ratings: <strong style={{ color: getColorBasedOnRating(userDetails.rating) }}>{userDetails.rating}</strong></p>
+              <p>Max Ratings: <strong style={{ color: getColorBasedOnRating(userDetails.maxRating) }}>{userDetails.maxRating}</strong>
+            <strong style={{ color: getColorBasedOnRating(userDetails.maxRating) }}>
+              {typeof userDetails.maxRank === 'string' && userDetails.maxRank.length > 1 ?
+                " (" + userDetails.maxRank.charAt(0).toUpperCase() + userDetails.maxRank.slice(1) + ")" :
+                " (" + userDetails.maxRating + ")"
+              }
+            </strong><br /></p>
               <p>Friends: {userDetails.friendOfCount}</p>
             </div>
           )}
